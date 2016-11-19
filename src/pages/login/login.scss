@@ -1,3 +1,57 @@
 page-login {
+    .login-overlay {
+        position: absolute;
+        background: #2e2e2e;
+        height: 100%;
+        width: 100%;
+        opacity: .4;
+        z-index: 1;
+    }
+    .login {
+        // background-size: cover;
+        // background-position: center center;
+        background-color: $background-color;
 
+        #logo {
+            display: block;
+            width: 60%;
+            margin: 17vh auto 0;
+        }
+
+        ion-list {
+            position: relative;
+            top: 10vh;
+        }
+
+        ion-item {
+            background: rgba(255,255,255,0.3);
+            color: $background-color;
+
+            input {
+            &::-webkit-input-placeholder {
+                color: $background-color;
+            }
+
+            &:-moz-placeholder { /* Firefox 18- */
+                color: $background-color;  
+            }
+
+            &::-moz-placeholder {  /* Firefox 19+ */
+                color: $background-color;  
+            }
+
+            &:-ms-input-placeholder {  
+                color: $background-color;  
+            }
+            }
+        }
+
+        .button {
+            display: block;
+            margin: auto;
+            position: relative;
+            top: 10vh;
+            cursor: pointer;
+        }
+    }
 }

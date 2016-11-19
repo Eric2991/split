@@ -1,5 +1,5 @@
 <div class="login-overlay"></div>
-<ion-content class="login" [ngStyle]="{'background-image': 'url(assets/img/splash.jpg)'}">
+<ion-content class="login"> <!-- [ngStyle]="{'background-image': 'url(assets/img/splash.jpg)'}" -->
   <img src="img/logo.png" alt="Split Fairly" id="logo">
   <ion-list>
     <ion-item>
@@ -11,5 +11,5 @@
     </ion-item>
   </ion-list>
 
-  <button full (click)="presentLoadingDefault()">Login</button>
+  <div class="button" full (click)="presentLoadingDefault()">Login</div>
 </ion-content>
