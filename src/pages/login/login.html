@@ -1,0 +1,15 @@
+<div class="login-overlay"></div>
+<ion-content class="login" [ngStyle]="{'background-image': 'url(assets/img/splash.jpg)'}">
+  <img src="img/logo.png" alt="Split Fairly" id="logo">
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button full (click)="presentLoadingDefault()">Login</button>
+</ion-content>
