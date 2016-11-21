@@ -1,12 +1,54 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>dashboard</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+	<div class="banner">
+		<div class="banner-message">
+			<h1>{{ timeGreeting }}</h1>
+			<h2>You have {{ sessionString }}</h2>
+		</div>
+	</div>
+	<div class="list-container" *ngFor="let session of sessions">
+		<ion-card>
+			<ion-item>
+				<h2>{{session.groupName}}</h2>
+				<p>with {{session.groupMembers | listMax: 4}}</p>
+			</ion-item>
 
+			<ion-card-content>
+				<div class="total-display">
+					<h1>{{session.amountDueTotal}}</h1>
+					<p>owed to {{ session.groupMembers.length }} people.</p>
+				</div>
+				<p>Ending {{session.endingDate}}</p>
+			</ion-card-content>
+
+			<ion-row>
+				<ion-col>
+				<button primary clear small>
+					<ion-icon name="add"></ion-icon>
+					<div>Add an Item</div>
+				</button>
+				</ion-col>
+				<ion-col>
+				<button primary clear small>
+					<ion-icon name="create"></ion-icon>
+					<div>Edit Group</div>
+				</button>
+				</ion-col>
+			</ion-row>
+		</ion-card>
+	</div>
+	<ion-tabs class="tabs-icon-text" [color]="primary">
+		<ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
+		<ion-tab tabIcon="leaf" tabTitle="Life" [root]="rootPage"></ion-tab>
+		<ion-tab tabIcon="flame" tabTitle="Fire" [root]="rootPage"></ion-tab>
+		<ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
+	</ion-tabs>
 </ion-content>
