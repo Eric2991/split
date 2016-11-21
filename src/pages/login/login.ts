@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, LoadingController } from 'ionic-angular';
-import { DashboardPage } from '../dashboard/dashboard';
+import { TabsPage } from '../tabs/tabs';
 
 @Component({
   selector: 'page-login',
@@ -11,12 +11,8 @@ export class LoginPage {
   constructor(public navCtrl: NavController,
               private loadingCtrl: LoadingController) {}
 
-  ionViewDidLoad() {
-
-  }
-
   Dashboard(): void {
-    this.navCtrl.setRoot(DashboardPage, {}, {animate: true, direction: 'forward'});
+    this.navCtrl.setRoot(TabsPage, {}, {animate: true, direction: 'forward'});
   }
 
   presentLoadingDefault() {
