@@ -21749,6 +21749,89 @@ sub {
   }
 }
 
+page-dashboard .banner {
+  background-color: #0c433c;
+  margin: -16px;
+  padding: 6vh 16px;
+  left: 0;
+  top: 0;
+  text-align: center;
+}
+
+page-dashboard .banner-message h1 {
+  font-size: 2.5rem;
+}
+
+page-dashboard .banner-message h2 {
+  font-size: 1.5rem;
+}
+
+page-dashboard .list-container {
+  margin-top: 30px;
+}
+
+page-dashboard .list-container ion-card {
+  background: #1a9b8a;
+}
+
+page-dashboard .list-container ion-card ion-card-content {
+  padding-top: 16px !important;
+}
+
+page-dashboard .list-container ion-card ion-card-content .total-display {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  padding: 8px 0;
+}
+
+page-dashboard .list-container ion-card ion-card-content .total-display h1 {
+  font-size: 3.5rem;
+}
+
+page-dashboard .list-container ion-card ion-card-content .total-display p {
+  padding-left: 5px;
+}
+
+page-dashboard .list-container ion-card ion-card-content > p {
+  text-align: right;
+}
+
+page-dashboard .list-container ion-item {
+  background: #178576;
+}
+
+page-dashboard .list-container ion-col {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+page-dashboard .list-container ion-col:last-child {
+  border-right: none;
+}
+
+page-dashboard .list-container ion-col button {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  background: none;
+  color: #fff;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+page-dashboard .list-container ion-col ion-icon {
+  font-size: 2.5rem;
+  padding-right: 1rem;
+}
+
 page-login .login-overlay {
   position: absolute;
   background: #2e2e2e;
