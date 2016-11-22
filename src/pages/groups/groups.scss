@@ -1,3 +1,66 @@
 page-groups {
+    .list-container {
+        margin-top: 30px;
 
+        ion-card {
+            background: lighten($background-color, 5%);
+
+            ion-card-content {
+                padding-top: 16px!important;
+
+                .total-display {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 8px 0;
+
+                    div {
+                        &:first-child {
+                            padding-right: 1rem;
+
+                            &::after {
+                                content: '/';
+                                font-size: 3.5rem;
+                                padding-left: 1rem;
+                            }
+                        }
+                    }
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                    p {
+                        padding-left: 5px;
+                    }
+                }
+                > p {
+                    text-align: right;
+                }
+            }
+        }
+        ion-item {
+            background: lighten($background-color, 10%);
+        }
+
+        ion-col {
+            border-top: 1px solid darken($background-color, 2%);
+            border-right: 1px solid darken($background-color, 2%);
+            text-align: center;
+
+            &:last-child {
+                border-right: none;
+            }
+            button {
+                display: flex;
+                margin: 0 auto;
+                font-size: 1.5rem;
+                background: none;
+                color: $text-color;
+                align-items: center;
+            }
+            ion-icon {
+                font-size: 2.5rem;
+                padding-right: 1rem;
+            }
+        }
+    }
 }
