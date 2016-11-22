@@ -1,6 +1,6 @@
 page-dashboard {
     .banner {
-        background-color: darken($background-color, 10%);
+        background-color: darken($secondary-color, 10%);
         margin: -16px;
         padding: 6vh 16px;
         left: 0;
@@ -23,20 +23,41 @@ page-dashboard {
         margin-top: 30px;
 
         ion-card {
-            background: lighten($background-color, 10%);
+            background: lighten($background-color, 5%);
 
             ion-card-content {
                 padding-top: 16px!important;
 
                 .total-display {
                     display: flex;
-                    align-items: baseline;
+                    align-items: center;
+                    justify-content: center;
                     padding: 8px 0;
 
+                    .owed h1 {
+                        color: $good-color;
+                    }
+                    .due h1 {
+                        color: $error-color;
+                    }
+                    div {
+                        &:first-child {
+                            padding-right: 1rem;
+
+                            &::after {
+                                content: '/';
+                                color: $text-color;
+                                font-size: 3.5rem;
+                                padding-left: .5rem;
+                            }
+                        }
+                    }
                     h1 {
+                        display: inline;
                         font-size: 3.5rem;
                     }
                     p {
+                        display: inline;
                         padding-left: 5px;
                     }
                 }
@@ -46,12 +67,12 @@ page-dashboard {
             }
         }
         ion-item {
-            background: lighten($background-color, 5%);
+            background: lighten($background-color, 10%);
         }
 
         ion-col {
-            border-top: 1px solid rgba(255,255,255,0.2);
-            border-right: 1px solid rgba(255,255,255,0.2);
+            border-top: 1px solid darken($background-color, 2%);
+            border-right: 1px solid darken($background-color, 2%);
             text-align: center;
 
             &:last-child {

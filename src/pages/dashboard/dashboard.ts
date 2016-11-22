@@ -3,30 +3,35 @@ import { NavController, ModalController } from 'ionic-angular';
 
 // Import Pages
 import { GroupViewPage } from '../group-view/group-view';
-import { SettingsPage } from '../settings/settings';
+import { SessionViewPage } from '../session-view/session-view';
+import { QuickAddPage } from '../quick-add/quick-add'
 
 @Component({
   selector: 'page-dashboard',
   templateUrl: 'dashboard.html'
 })
 export class DashboardPage {
-  name = "Eric";
+  name: string = "Eric";
   sessions = [
     {
+      sessionId: 6182,
       groupName: 'Roommates',
       groupMembers: ['Zak', 'Matthew'],
       amountDueTotal: '$12.41',
+      amountOwedTotal: '$4.30',
       endingDate: '12/4/2016'
     },
     {
+      sessionId: 6183,
       groupName: 'Lorem Ipsum',
       groupMembers: ['Richie', 'Steve', 'David', 'Jerry', 'Chris', 'Matthew'],
       amountDueTotal: '$12.41',
+      amountOwedTotal: '$4.30',
       endingDate: '12/4/2016'
     }
   ];
-  timeGreeting = this.setTimeGreeting();
-  sessionString = this.setSessionString();
+  timeGreeting: string = this.setTimeGreeting();
+  sessionString: string = this.setSessionString();
 
   constructor(public navCtrl: NavController,
               private modalController: ModalController) {}
@@ -39,8 +44,8 @@ export class DashboardPage {
     this.navCtrl.push(GroupViewPage, { groupId: groupId });
   }
 
-  presentModal(): void {
-    let modal = this.modalController.create(SettingsPage);
+  presentModal(sessionId: number): void {
+    let modal = this.modalController.create(QuickAddPage, {"displayParams": sessionId});
     modal.present();
   }
 

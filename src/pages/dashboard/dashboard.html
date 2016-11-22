@@ -23,15 +23,19 @@
 
 			<ion-card-content>
 				<div class="total-display">
-					<h1>{{session.amountDueTotal}}</h1>
-					<p>owed to {{ session.groupMembers.length }} people.</p>
+					<div class="due">
+						<h1>{{session.amountDueTotal}}</h1>
+					</div>
+					<div class="owed">
+						<h1>{{session.amountOwedTotal}}</h1>
+					</div>
 				</div>
 				<p>Ending {{session.endingDate}}</p>
 			</ion-card-content>
 
 			<ion-row>
 				<ion-col>
-				<button primary clear small>
+				<button primary clear small (click)="presentModal(session.sessionId)">
 					<ion-icon name="add"></ion-icon>
 					<div>Add an Item</div>
 				</button>
@@ -45,10 +49,4 @@
 			</ion-row>
 		</ion-card>
 	</div>
-	<ion-tabs class="tabs-icon-text" [color]="primary">
-		<ion-tab tabIcon="water" tabTitle="Water" [root]="rootPage"></ion-tab>
-		<ion-tab tabIcon="leaf" tabTitle="Life" [root]="rootPage"></ion-tab>
-		<ion-tab tabIcon="flame" tabTitle="Fire" [root]="rootPage"></ion-tab>
-		<ion-tab tabIcon="magnet" tabTitle="Force" [root]="rootPage"></ion-tab>
-	</ion-tabs>
 </ion-content>
