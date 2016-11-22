@@ -8,5 +8,11 @@
 
 
 <ion-content padding>
-
+	<div class="banner">
+		<div class="banner-message">
+			<div class="profile-thumbnail" style="background-image: url('assets/img/splash.jpg')"></div>
+			<h1>{{ name }}</h1>
+			<button primary clear small (click)="presentModal()">Edit Account</button>
+		</div>
+	</div>
 </ion-content>
