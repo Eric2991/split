@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Quick-Add</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-border>
+    <ion-list-header>
+      Step 1: Add Item(s)
+    </ion-list-header>
+    <ion-item *ngFor="let envVar of envVars.controls" [formGroup]="envVar">
+      <ion-input formControlName="name" type="text" placeholder="Name"></ion-input>
+      <ion-input formControlName="price" type="text" placeholder="Price"></ion-input>
+    </ion-item>
+    <ion-item (click)="addNewItem()">
+      <ion-icon name="add"></ion-icon> Add New Item
+    </ion-item>
+    <!-- Next Step -->
+    <ion-list-header>
+      Step 2: Select List
+    </ion-list-header>
+    <ion-item>
+      <ion-label>List</ion-label>
+      <ion-select [(ngModel)]="sessionList">
+        <ion-option *ngFor="let list of session.lists" value="list.name">{{ list.name }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button primary (click)="saveItem()">Add Item</button>
+</ion-content>
