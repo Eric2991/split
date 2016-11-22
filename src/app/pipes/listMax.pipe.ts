@@ -7,7 +7,6 @@ export class ListMaxPipe implements PipeTransform {
 
         for (let i=0; i<Math.min(limit, list.length); i++) {
             result += list[i] + ", ";
-            console.log(list[i]);
         }
 
         // Get rid of last comma
