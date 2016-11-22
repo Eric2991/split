@@ -11,7 +11,10 @@
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 $text-color:        #fff;
-$background-color:  #136F63;
+$background-color:  #84CAE7;
+$secondary-color:   darken($background-color, 10%);
+$good-color:        #02B875;
+$error-color:       #ed7669;
 
 
 // Named Color Variables
@@ -23,7 +26,7 @@ $background-color:  #136F63;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
+  primary:    #fff,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -35,21 +38,34 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
+$item-ios-paragraph-text-color: $text-color;
+$card-ios-text-color: $text-color;
+$toolbar-ios-background: $secondary-color;
+$toolbar-ios-border-color: $secondary-color;
+$tabs-ios-tab-color: lighten($background-color, 10%);
 
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$item-md-paragraph-text-color: $text-color;
+$card-md-text-color: $text-color;
+$toolbar-md-background: $secondary-color;
+$toolbar-md-border-color: $secondary-color;
+$tabs-md-tab-color: lighten($background-color, 10%);
 
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
-
+$item-wp-paragraph-text-color: $text-color;
+$card-wp-text-color: $text-color;
+$toolbar-wp-background: $secondary-color;
+$toolbar-wp-border-color: $secondary-color;
+$tabs-wp-tab-color: lighten($background-color, 10%);
+$text-input-wp-border-color: darken($background-color, 5%);
 
 
 // App Theme
